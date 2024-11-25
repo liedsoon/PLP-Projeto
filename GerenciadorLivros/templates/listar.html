@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block titulo %}Lista de Livros{% endblock %}
+
+{% block conteudo %}
+<div class="container mt-5">
+    <h1 class="text-center">Lista de Livros</h1>
+    <a href="{{ url_for('home') }}" class="btn btn-secondary mb-3">Voltar</a>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Título</th>
+                <th>Autor</th>
+                <th>Gênero</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for livro in livros %}
+            <tr>
+                <td>{{ livro.id }}</td>
+                <td>{{ livro.titulo }}</td>
+                <td>{{ livro.autor }}</td>
+                <td>{{ livro.genero }}</td>
+                <td>
+                    <a href="{{ url_for('editar_livro', id=livro.id) }}" class="btn btn-warning btn-sm">Editar</a>
+                    <form action="{{ url_for('deletar_livro', id=livro.id) }}" method="POST" style="display:inline;">
+                        <button type="submit" class="btn btn-danger btn-sm">Excluir</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

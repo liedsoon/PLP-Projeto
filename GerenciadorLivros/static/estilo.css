@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/static/images/estante-livros.jpg');
+    background-size: cover; /* Faz com que a imagem cubra todo o fundo */
+    background-repeat: no-repeat; /* Impede que a imagem se repita */
+    background-attachment: fixed; /* A imagem não se move ao rolar a página */
+    background-position: center; /* Centraliza a imagem no fundo */
+    color: #fff; /* Ajusta o texto para ficar visível sobre o fundo */
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.8); /* Torna o cabeçalho parcialmente opaco */
+    padding: 10px;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff; /* Fundo branco para a tabela */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar a tabela */
+    border-radius: 8px; /* Bordas arredondadas */
+    overflow: hidden; /* Evita que as bordas arredondadas sejam cortadas */
+}
+
+table th {
+    background-color: #f4f4f4; /* Fundo cinza claro para o cabeçalho */
+    color: #000; /* Cor do texto preto */
+    font-weight: bold;
+    text-align: left;
+    padding: 10px;
+    border-bottom: 2px solid #ddd;
+}
+
+table td {
+    padding: 10px;
+    color: #000; /* Cor do texto preto */
+    border-bottom: 1px solid #ddd; /* Linhas separadoras entre as células */
+}
+
+h1, h2, p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adiciona sombra ao texto */
+}
+

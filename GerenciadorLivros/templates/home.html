@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block titulo %}Página Inicial{% endblock %}
+
+{% block conteudo %}
+
+<div class="my-4">
+    <img src="{{ url_for('static', filename='livrosimg.jpg') }}" class="w-100">
+</div>
+
+
+<div class="container d-flex justify-content-center align-items-center" style="height: 30vh; background-color: #f0f0f0;">
+    <div class="text-center">
+        <h1>Gerenciador de Livros</h1>
+        <div class="mt-5">
+            <a href="{{ url_for('listar_livros') }}" class="btn btn-primary btn-lg mb-3">Listar Livros</a>
+            <a href="{{ url_for('adicionar_livro') }}" class="btn btn-success btn-lg mb-3">Cadastrar Livro</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
